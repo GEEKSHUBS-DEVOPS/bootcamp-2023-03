@@ -1,8 +1,13 @@
 # bootcamp-2023-03
-
 ## GET START 
+   ### install dependencies
 
-   ### first install
+   `make install`
 
-   ### starting
+   ### start environment
+
+    `make start`
+
+
+# ENVIRONMENT VARS
 

@@ -16,6 +16,9 @@ logs:
 
 install: 
 	docker compose -f ./deploy/development/install.yaml up
+	cp .env.template .env
+	
+	
 
 create-nest-service:  ## add new next service to enviromnent
 	@read -p "enter proyect name: " name; \
@@ -38,3 +41,7 @@ remove:	## borra
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+
+generate-env:
+	cp .env.template .env
