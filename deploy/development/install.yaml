@@ -1,0 +1,40 @@
+services:
+  frontend:
+    build:
+      context: ./builds/angular-cli
+    working_dir: /app
+    command: npm i
+    volumes:
+      - ../../src/frontend:/app
+
+  admin-panel:
+    build:
+      context: ./builds/angular-cli
+    working_dir: /app
+    command: npm i 
+    volumes:
+      - ../../src/admin-panel:/app
+
+  backend:
+    build:
+      context: ./builds/nest-cli
+    working_dir: /app
+    command: npm i
+    volumes:
+      - ../../src/backend:/app
+  
+  auth-service:
+    build:
+      context: ./builds/nest-cli
+    working_dir: /app
+    command: npm i
+    volumes:
+      - ../../src/auth-service:/app
+  
+  message-service:
+    build:
+      context: ./builds/nest-cli
+    working_dir: /app
+    command: npm i
+    volumes:
+      - ../../src/message-service:/app

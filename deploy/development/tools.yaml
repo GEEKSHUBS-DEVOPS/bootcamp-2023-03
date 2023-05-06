@@ -1,0 +1,23 @@
+services:
+  data: 
+    build: 
+      context: ./builds/data
+    volumes:
+      - ../../data:/data
+    command: bash
+
+  angular:
+    build:
+      context: ./builds/angular-cli
+    working_dir: /app
+    command: bash
+    volumes:
+      - ../../src:/app
+
+  nest:
+    build:
+      context: ./builds/nest-cli
+    working_dir: /app
+    command: bash
+    volumes:
+      - ../../src:/app
