@@ -1,0 +1,6 @@
+/dist
+.env
+.devcontainer/
+node_modules/
+.github/
+.worker-configs/
